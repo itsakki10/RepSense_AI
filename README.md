@@ -265,21 +265,18 @@ AI Workout Report
 
 ## 📸 Screenshots
 
-Add screenshots inside a `/screenshots` folder and update:
+### Dashboard
 
-```md
 ![Dashboard](screenshots/dashboard.png)
+
+### Live Workout Tracking
 
 ![Live Tracking](screenshots/live_tracking.png)
 
+### Upload Video Analysis
+
 ![Video Analysis](screenshots/video_analysis.png)
-```
-<<<<<<< HEAD
 
----
-
-=======
->>>>>>> 777334866bef3bfdc9700afbe7774e38c9449c3b
 ## 👨‍💻 Author
 
 **Akash Mehra**
