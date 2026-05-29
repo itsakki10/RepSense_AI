@@ -8,6 +8,16 @@ Built using Computer Vision, MediaPipe Pose Estimation, Streamlit, and AI-powere
 
 ---
 
+## 🚀 Live Demo
+
+### Landing Page
+
+https://repsenseai-gym-coach.netlify.app/
+
+### RepSense AI Application
+
+https://repsenseai-gym-coach.streamlit.app/
+
 ## 🚀 Features
 
 ### 🎥 Real-Time Exercise Tracking
