@@ -20,6 +20,10 @@ from services.vision.video_analyzer import (
     analyze_uploaded_video
 )
 
+from services.coaching.report_generator import (
+    generate_report
+)
+
 from services.persistence.exercise_repository import (
     init_db,
     get_users_exercises
@@ -205,7 +209,52 @@ def main():
                             "Analysis Complete"
                         )
 
-                        st.json(result)
+                        report = generate_report(
+                            exercise,
+                            result
+                        )
+
+                        st.markdown(
+                            "## 📊 AI Workout Analysis Report"
+                        )
+
+                        col1, col2 = st.columns(2)
+
+                        with col1:
+                            st.metric(
+                            "Exercise",
+                            report["exercise"]
+                        )
+
+                        with col2:
+                            st.metric(
+                                "Total Reps",
+                                report["reps"]
+                         )
+
+                        st.metric(
+                            "Form Score",
+                            f"{report['score']}/100"
+                        )
+
+                        st.markdown(
+                            "### ✅ Strengths"
+                        )
+
+                        for item in report["positives"]:
+                            st.success(item)
+
+                        st.markdown(
+                            "### 🎯 Areas To Improve"
+                        )
+
+                        if report["improvements"]:
+                            for item in report["improvements"]:
+                                st.warning(item)
+                        else:
+                            st.success(
+                                "Excellent form detected."
+                            )
 
                 st.info(
                 "Video analysis mode is under development."
