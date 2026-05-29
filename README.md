@@ -274,7 +274,6 @@ Add screenshots inside a `/screenshots` folder and update:
 
 ![Video Analysis](screenshots/video_analysis.png)
 ```
---- 
 ## 👨‍💻 Author
 
 **Akash Mehra**
